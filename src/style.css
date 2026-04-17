@@ -1,0 +1,12 @@
+/* 全局暗色背景，模拟阅片室环境 */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #141414; /* 深灰色，非纯黑，更有质感 */
+  color: #e0e0e0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+#root {
+  height: 100vh;
+}
