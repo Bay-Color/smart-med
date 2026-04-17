@@ -1,73 +1,33 @@
-# React + TypeScript + Vite
+# Smart-Med 智能医疗项目仓库
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> 杭州医学院智能医学工程专业 | 医疗健康IT方向学习与项目仓库
 
-Currently, two official plugins are available:
+## 项目结构
+- `med-dashboard/`：医疗数据仪表盘（核心实战项目）
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## med-dashboard 医疗数据仪表盘
+### 项目背景
+本项目是面向医疗机构的轻量级医疗数据仪表盘，用于展示患者就诊数据、科室运营数据、医疗资源占用情况等，帮助医护/管理岗快速掌握核心医疗数据。
 
-## React Compiler
+### 核心功能
+- 📊 患者就诊量趋势可视化（日/周/月）
+- 🏥 科室床位占用率实时监控
+- 📈 医疗耗材使用统计与预警
+- 📋 基础数据筛选/导出功能
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 技术栈
+- 前端：HTML/CSS/JavaScript / React（根据实际技术栈修改）
+- 数据可视化：ECharts / Chart.js（医疗数据可视化常用库）
+- 后端（可选）：Node.js + MySQL（医疗数据存储）
 
-## Expanding the ESLint configuration
+### 运行方式
+```bash
+# 克隆仓库
+git clone https://github.com/Bay-Color/smart-med.git
+cd smart-med/med-dashboard
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# 安装依赖（如有）
+npm install
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# 启动项目
+npm run dev
